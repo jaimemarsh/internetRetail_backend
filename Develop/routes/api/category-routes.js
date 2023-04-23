@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     include: [Product],
   })
     .then((categories) => res.json(categories))
-    .catch((err) => res.statys(500).json(err))
+    .catch((err) => res.status(500).json(err))
 });
 
 router.get('/:id', (req, res) => {
