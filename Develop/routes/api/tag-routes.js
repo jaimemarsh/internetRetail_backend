@@ -20,7 +20,7 @@ router.get('/:id', (req, res) => {
       id: req.params.id,
     },
     include: [{
-      model: Tag,
+      model: Product,
       through: ProductTag
     }]
   })
@@ -45,7 +45,7 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  Tag.destory({
+  Tag.destroy({
     where: {
       id: req.params.id,
     }
